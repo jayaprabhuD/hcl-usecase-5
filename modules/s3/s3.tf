@@ -14,10 +14,6 @@ resource "aws_s3_bucket" "upload" {
 resource "aws_s3_bucket" "dest" {
   bucket = var.image_compressed_bucket_name
  
-  versioning_configuration {
-    status = "Enabled"
-  }
- 
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
