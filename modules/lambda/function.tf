@@ -23,7 +23,7 @@ resource "aws_lambda_permission" "allow_s3" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.picture_compress.arn
   principal = "s3.amazonaws.com"
-  source_arn    = "arn:aws:s3:::${var.source_bucket_name}"
+  upload_bucket_arn    = "arn:aws:s3:::${var.upload_bucket_name}"
 }
  
 resource "aws_s3_bucket_notification" "lambda_trigger" {
