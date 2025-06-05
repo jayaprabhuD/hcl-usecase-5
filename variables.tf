@@ -1,5 +1,5 @@
 variable "upload-bucket-name" { 
-  default = "upload-bucket-name"
+  default = "upload-image-bucket-name"
 }
 variable "image-compressed-bucket-name" {
   default = "image-compressed-bucket-name"
