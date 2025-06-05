@@ -1,5 +1,5 @@
 variable "upload_bucket_name" { 
-  default = "upload-image-bucket-name"
+  default = "upload_image-bucket-name"
 }
 variable "image-compressed-bucket-name" {
   default = "image-compressed-bucket-name"
@@ -11,14 +11,14 @@ variable "sns_topic_name" {
 variable "lambda_function_name" { default = "lambda-picture" }
 variable "resize_width" { default = 600 }
 
-#variable "tags" {
-#  type = map(string)
-#  default = {
-#    Project   = "ImageProcessor"
-#    Owner     = "prodTeam"
-#    ManagedBy = "Terraform"
-#  }
-#}
+variable "tags" {
+  type = map(string)
+  default = {
+    Project   = "ImageProcessor"
+    Owner     = "prodTeam"
+    ManagedBy = "Terraform"
+  }
+}
 variable "email" { 
   default = "jayaprabhu.dheen@hcltech.com"
 }

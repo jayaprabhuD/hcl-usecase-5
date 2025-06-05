@@ -19,13 +19,13 @@ module "iam" {
   lambda_role         = var.lambda_role
 }
  
-#module "lambda" {
-#  source             = "./modules/lambda"
-#  function_name      = var.lambda_function_name
-#  role_arn           = module.iam.lambda_role_arn
-#  source_bucket_name = var.source_bucket_name
-#  dest_bucket_name   = var.dest_bucket_name
-#  sns_topic_arn      = module.sns.topic_arn
-#  resize_width       = var.resize_width
-#  tags               = var.tags
-#}
+module "lambda" {
+  source             = "./modules/lambda"
+  function_name      = var.lambda_function_name
+  role_arn           = module.iam.lambda_role_arn
+  upload_bucket_name  = var.upload_bucket_name
+  image-compressed-bucket-name   = var.image-compressed-bucket-name
+  sns_topic_arn      = module.sns.topic_arn
+  resize_width       = var.resize_width
+  tags               = var.tags
+}
