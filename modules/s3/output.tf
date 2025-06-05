@@ -1,4 +1,4 @@
-output "upload_bucket_arn" {
+output "upload-bucket-arn" {
   value = aws_s3_bucket.upload-image.arn
 }
  
