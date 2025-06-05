@@ -1,2 +1,2 @@
-variable "topic_name" {}
-variable "email" {}
+#variable "topic_name" {}
+#variable "email" {}
