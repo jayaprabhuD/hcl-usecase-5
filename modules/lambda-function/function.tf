@@ -27,7 +27,7 @@ resource "aws_lambda_permission" "allow_s3" {
 }
  
 resource "aws_s3_bucket_notification" "lambda_trigger" {
-  bucket = var.source_bucket_name
+  bucket = var.upload_bucket_name
  
   lambda_function {
     lambda_function_arn = aws_lambda_function.picture_compress.arn
