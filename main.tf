@@ -1,7 +1,7 @@
 module "s3" {
   source              = "./modules/s3"
-  upload_bucket_name  = var.upload_bucket_name
-  image_compressed_bucket_name    = var.image_compressed_bucket_name
+  upload-bucket-name  = var.upload-bucket-name
+  image-compressed-bucket-name    = var.image-compressed-bucket-name
  
 }
  

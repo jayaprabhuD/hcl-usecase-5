@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "upload" {
-  bucket = var.upload_bucket_name
+  bucket = var.upload-bucket-name
 
    server_side_encryption_configuration {
     rule {
@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "upload" {
 
  
 resource "aws_s3_bucket" "dest" {
-  bucket = var.image_compressed_bucket_name
+  bucket = var.image-compressed-bucket-name
  
   server_side_encryption_configuration {
     rule {
