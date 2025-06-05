@@ -1,8 +1,8 @@
-variable "upload_bucket_name" { 
-  default = "upload_bucket_name"
+variable "upload-bucket-name" { 
+  default = "upload-bucket-name"
 }
-variable "image_compressed_bucket_name" {
-  default = "image_compressed_bucket_name"
+variable "image-compressed-bucket-name" {
+  default = "image-compressed-bucket-name"
 }
 
 #variable "sns_topic_name"     { default = "image-topic" }
