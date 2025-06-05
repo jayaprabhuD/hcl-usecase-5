@@ -1,2 +1,2 @@
-#variable "topic_name" {}
+#variable "sns_topic_name" {}
 #variable "email" {}
