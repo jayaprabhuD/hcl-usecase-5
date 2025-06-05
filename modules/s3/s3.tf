@@ -1,8 +1,5 @@
 resource "aws_s3_bucket" "upload" {
   bucket = var.upload_bucket_name
-  versioning_configuration {
-    status = "Enabled"
-  }
 
    server_side_encryption_configuration {
     rule {
@@ -10,6 +7,14 @@ resource "aws_s3_bucket" "upload" {
         sse_algorithm = "AES256"
       }
     }
+  }
+}
+
+resource "aws_s3_bucket_versioning" "upload" {
+  bucket = aws_s3_bucket.upload.id
+
+  versioning_configuration {
+    status = "Enabled"
   }
 }
  
@@ -26,5 +31,13 @@ resource "aws_s3_bucket" "dest" {
         sse_algorithm = "AES256"
       }
     }
+  }
+}
+
+resource "aws_s3_bucket_versioning" "dest" {
+  bucket = aws_s3_bucket.dest.id
+
+  versioning_configuration {
+    status = "Enabled"
   }
 }
