@@ -39,6 +39,18 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.12.1
+      
+            - name: Set up Node js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18   
+
+      - name: Install dependencies and create ZIP
+        run: |
+          ls 
+          cd file/js
+          npm install 
+          zip -r ../../file/js/picture_compress.zip .
 
       - name: Terraform Init
         run: terraform init
