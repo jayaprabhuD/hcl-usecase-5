@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "dest" {
 }
 
 resource "aws_s3_bucket" "upload-image" {
-  bucket = var.upload-bucket-name
+  bucket = var.upload_bucket_name
  
   server_side_encryption_configuration {
     rule {

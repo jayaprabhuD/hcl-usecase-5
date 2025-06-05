@@ -45,7 +45,7 @@ resource "aws_iam_role_policy" "new_lambda_policy" {
       {
         Effect   = "Allow",
         Action   = ["sns:Publish"],
-        Resource = var.sns_topic_name_arn
+        Resource = var.sns_topic_arn
       },
       {
         Effect   = "Allow",

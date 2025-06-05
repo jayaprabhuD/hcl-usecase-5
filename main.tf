@@ -1,6 +1,6 @@
 module "s3" {
   source              = "./modules/s3"
-  upload-bucket-name  = var.upload-bucket-name
+  upload_bucket_name  = var.upload_bucket_name
   image-compressed-bucket-name    = var.image-compressed-bucket-name
  
 }
@@ -8,7 +8,7 @@ module "s3" {
 module "sns" {
   source           = "./modules/sns"
   sns_topic_name   = var.sns_topic_name
-#  tags             = var.tags
+  tags             = var.tags
   email            = var.email
 }
  

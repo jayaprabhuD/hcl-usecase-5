@@ -9,7 +9,7 @@ resource "aws_lambda_function" "picture_compress" {
   environment {
     variables = {
       DEST_BUCKET    = var.image-compressed-bucket-name
-      SNS_TOPIC_ARN  = var.sns_topic_name_arn
+      SNS_TOPIC_ARN  = var.sns_topic_arn
       RESIZE_WIDTH   = var.resize_width
       RESIZED_BUCKET_NAME = var.image-compressed-bucket-name
     }
