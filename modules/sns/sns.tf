@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "topic" {
-  name = var.topic_name
+  name = var.sns_topic_name
 }
  
 resource "aws_sns_topic_subscription" "email" {
