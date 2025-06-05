@@ -10,13 +10,6 @@ resource "aws_s3_bucket" "upload" {
   }
 }
 
-resource "aws_s3_bucket_versioning" "upload" {
-  bucket = aws_s3_bucket.upload.id
-
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
  
 resource "aws_s3_bucket" "dest" {
   bucket = var.image_compressed_bucket_name
@@ -31,13 +24,5 @@ resource "aws_s3_bucket" "dest" {
         sse_algorithm = "AES256"
       }
     }
-  }
-}
-
-resource "aws_s3_bucket_versioning" "dest" {
-  bucket = aws_s3_bucket.dest.id
-
-  versioning_configuration {
-    status = "Enabled"
   }
 }
