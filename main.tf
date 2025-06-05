@@ -7,7 +7,7 @@ module "s3" {
  
 module "sns" {
   source           = "./modules/sns"
-  topic_name       = var.sns_topic_name
+  sns_topic_name       = var.sns_topic_name
   email            = var.email
 }
  
