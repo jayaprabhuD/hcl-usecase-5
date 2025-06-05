@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "upload" {
   bucket = var.upload_bucket_name
-  aws_s3_bucket_versioning {
-    enabled = true
+  versioning_configuration {
+    status = "Enabled"
   }
 
    server_side_encryption_configuration {
@@ -16,8 +16,8 @@ resource "aws_s3_bucket" "upload" {
 resource "aws_s3_bucket" "dest" {
   bucket = var.image_compressed_bucket_name
  
-  versioning {
-    enabled = true
+  versioning_configuration {
+    status = "Enabled"
   }
  
   server_side_encryption_configuration {
