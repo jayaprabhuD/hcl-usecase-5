@@ -14,9 +14,9 @@ module "sns" {
  
 module "iam" {
   source            = "./modules/iam"
-  upload_bucket_arn = module.s3.upload_bucket_arn
-  image-compressed-bucket-name-arn   = module.image-compressed-bucket-name-arn
-  sns_topic_name_arn     = module.sns.topic_arn
+  upload-bucket-arn = module.s3.upload-bucket-arn
+  image-compressed-bucket-name-arn   = module.s3.image-compressed-bucket-name-arn
+  sns_topic_arn     = module.sns.topic_arn
   lambda_role         = var.lambda_role
 }
  
